@@ -1,0 +1,14 @@
+// tsconfig.json
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "esnext",
+        "outDir": "./",
+        "removeComments": true,
+        "strict": true,
+        "lib": ["esnext"],
+        "strictNullChecks": true
+    },
+    "include": ["./lib/**/*.ts", "./lib/**/*.d.ts"],
+    "exclude": []
+}

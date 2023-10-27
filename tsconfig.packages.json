@@ -1,0 +1,19 @@
+// tsconfig.packages.json
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "ESNext",
+        "outDir": "./",
+        "removeComments": true,
+        "strict": true,
+        "lib": [
+            "esnext"
+        ],
+        "strictNullChecks": false
+    },
+    "include": [
+        "./packages/**/*.ts",
+        "./packages/**/*.d.ts"
+    ],
+    "exclude": []
+}

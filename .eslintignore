@@ -1,0 +1,4 @@
+dist/
+build/
+.eslintrc.js
+rollup.config.ts

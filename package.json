@@ -1,0 +1,43 @@
+{
+  "name": "wx-privacy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:kinvirgo/wx-privacy.git",
+  "author": "kinngyo <jiangjinyu@ijovo.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "devDependencies": {
+    "@kinngyo/package-publish": "^0.0.2",
+    "@types/node": "^20.8.9",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard-with-typescript": "^39.1.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "glob": "^10.3.10",
+    "html-minifier": "^4.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "postcss": "^8.4.31",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "sass": "^1.69.5",
+    "typescript": "*",
+    "uglify-js": "^3.17.4"
+  },
+  "scripts": {
+    "build": "rimraf dist && node build/compiler.js && rollup -c rollup.config.ts --configPlugin typescript",
+    "prepare": "husky install",
+    "publish:npm": "package-publish"
+  }
+}

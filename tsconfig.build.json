@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "target": "ES5",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "checkJs": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "include": [
+        "./build/**/*.js"
+    ],
+    "exclude": []
+}
