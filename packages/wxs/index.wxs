@@ -1,0 +1,30 @@
+var style = require('./style.wxs')
+
+function overlay(data) {
+    var transitionDuration = data.duration + 'ms'
+    return style([
+        {
+            'z-index': data.zIndex + 1,
+            '-webkit-transition-duration': transitionDuration,
+            'transition-duration': transitionDuration,
+        },
+        data.display ? { opacity: data.opacity } : 'display: none',
+    ])
+}
+
+function popup(data) {
+    var transitionDuration = data.duration + 'ms'
+    return style([
+        {
+            'z-index': data.zIndex + 1,
+            '-webkit-transition-duration': transitionDuration,
+            'transition-duration': transitionDuration,
+        },
+        data.display ? null : 'display: none',
+    ])
+}
+
+module.exports = {
+    overlay: overlay,
+    popup: popup,
+}

@@ -1,0 +1,50 @@
+var object = require('./object.wxs')
+var array = require('./array.wxs')
+/*
+{ display : none } = > "display:none;"
+[{display:none},"font-size : 12rpx"] = > "display:none;font-size:12rpx"
+
+// 大写转换
+[{ fontSize : '12rpx' }] = > "font-size:12rpx"
+
+*/
+
+function style(styles) {
+    if (array.isArray(styles)) {
+        return styles
+            .filter(function (item) {
+                return item != null && item !== ''
+            })
+            .map(function (item) {
+                return style(item)
+            })
+            .join(';')
+    }
+
+    if (styles.constructor === 'Object') {
+        return object
+            .keys(styles)
+            .filter(function (key) {
+                return styles[key] != null && styles[key] !== ''
+            })
+            .map(function (key) {
+                return [kebabCase(key), [styles[key]]].join(':')
+            })
+            .join(';')
+    }
+
+    return styles
+}
+
+/* zIndex => z-index */
+function kebabCase(word) {
+    var newWord = word
+        .replace(getRegExp('[A-Z]', 'g'), function (i) {
+            return '-' + i
+        })
+        .toLowerCase()
+
+    return newWord
+}
+
+module.exports = style

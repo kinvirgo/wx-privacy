@@ -1,0 +1,26 @@
+<!--components/privacy-authorize/index.wxml-->
+<wxs src="../wxs/index.wxs" module="computed" />
+
+<block wx:if="{{isInit}}">
+    <!-- overlay -->
+    <view
+        wx:if="{{lockScroll}}"
+        class="privacy__overlay"
+        style="{{ computed.overlay({  zIndex, display, duration, opacity }) }}"
+        catchtap="doClose"
+        catchtouchmove="noop"></view>
+    <view
+        wx:else
+        class="privacy__overlay"
+        style="{{ computed.overlay({  zIndex, display, duration, opacity }) }}"
+        catchtap="doClose"></view>
+
+    <!-- box -->
+    <view
+        class="privacy__popup popup__{{position}} {{classes}}"
+        style="{{ computed.popup({ zIndex, display, duration }) }}"
+        bind:transitionend="onTransitionEnd"
+        catchtouchmove="noop">
+        <slot></slot>
+    </view>
+</block>
