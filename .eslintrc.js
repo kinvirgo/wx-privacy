@@ -12,6 +12,9 @@ module.exports = {
                 extraFileExtensions: ['.wxs'],
             },
             parser: '@babel/eslint-parser',
+            parserOptions: {
+                ecmaVersion: 'es5',
+            },
         },
     ],
     parser: '@typescript-eslint/parser',

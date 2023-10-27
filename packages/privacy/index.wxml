@@ -1,7 +1,6 @@
 <!--components/privacy/index.wxml-->
 <wxs src="../wxs/style.wxs" module="style" />
 
-
 <popup show="{{ isShow }}">
     <view class="privacy custom-class">
         <view class="privacy__header custom-header-class">
