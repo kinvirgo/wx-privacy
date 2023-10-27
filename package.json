@@ -1,7 +1,9 @@
 {
   "name": "wx-privacy",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "miniprogram": "dist",
   "repository": "git@github.com:kinvirgo/wx-privacy.git",
   "author": "kinngyo <jiangjinyu@ijovo.com>",
   "license": "MIT",
@@ -14,6 +16,11 @@
   },
   "devDependencies": {
     "@kinngyo/package-publish": "^0.0.2",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.4",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
     "@types/node": "^20.8.9",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "autoprefixer": "^10.4.16",
@@ -32,6 +39,9 @@
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
+    "rollup": "^4.1.4",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-typescript2": "^0.36.0",
     "sass": "^1.69.5",
     "typescript": "*",
     "uglify-js": "^3.17.4"
