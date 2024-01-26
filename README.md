@@ -1,2 +1,2 @@
-# wx-privacy
-小程序隐私政策
+# weapp-npm-template
+小程序npm库开发模版

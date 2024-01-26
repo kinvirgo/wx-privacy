@@ -11,7 +11,7 @@ end_of_line = crlf
 # 空格缩进
 indent_style = space
 # 缩进空格为2个
-indent_size = 2
+indent_size = 4
 # 不保留行末的空格
 trim_trailing_whitespace = true
 #文件末尾添加一个空行

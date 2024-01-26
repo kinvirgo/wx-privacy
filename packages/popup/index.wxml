@@ -1,4 +1,3 @@
-<!--components/privacy-authorize/index.wxml-->
 <wxs src="../wxs/index.wxs" module="computed" />
 
 <block wx:if="{{isInit}}">

@@ -1,7 +1,5 @@
-// components/privacy-authorize/index.ts
-
 import { classNames } from './config'
-import { requestAnimationFrame } from './utils'
+import { requestAnimationFrame } from '../common/utils'
 
 Component({
     /**
