@@ -1,0 +1,32 @@
+<view class="stepper custom-class">
+    <view
+        wx:if="{{showMinus}}"
+        class="stepper__minus {{ disabled || disableMinus || currentValue <= min ? 'disabled' :'' }} custom-minus-class"
+        hover-stay-time="70"
+        hover-class="hover"
+        data-type="{{actionTypes.minus}}"
+        bind:tap="onTap"
+        bind:touchstart="onTouchStart"
+        bind:touchend="onTouchEnd"></view>
+    <input
+        class="stepper__input custom-input-class"
+        value="{{currentValue}}"
+        type="{{ integer ? 'number' : 'digit' }}"
+        disabled="{{ disabled || disableInput }}"
+        cursor-spacing="{{cursorSpacing}}"
+        always-embed="{{alwaysEmbed}}"
+        adjust-position="{{adjustPosition}}"
+        hold-keyboard="{{holdKeyboard}}"
+        bindfocus="onFocus"
+        bindinput="onInput"
+        bindblur="onBlur" />
+    <view
+        wx:if="{{showPlus}}"
+        class="stepper__plus {{ disabled || disablePlus || currentValue >= max ? 'disabled' :'' }} custom-plus-class"
+        hover-stay-time="70"
+        hover-class="hover"
+        data-type="{{actionTypes.plus}}"
+        bind:tap="onTap"
+        bind:touchstart="onTouchStart"
+        bind:touchend="onTouchEnd"></view>
+</view>

@@ -1,0 +1,6 @@
+<!--pages/stepper/index.wxml-->
+<text>pages/stepper/index.wxml</text>
+
+<view class="use-stepper">
+    <stepper disable-input step="{{ 1 }}" min="{{1}}" max="{{5}}" />
+</view>

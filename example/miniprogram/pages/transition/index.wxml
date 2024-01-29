@@ -1,0 +1,7 @@
+<!--pages/transition/index.wxml-->
+
+<transition show="{{isShow}}">
+    <text>pages/transition/index.wxml</text>
+</transition>
+
+<button bind:tap="doShow">{{isShow}}</button>

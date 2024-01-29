@@ -1,0 +1,67 @@
+.stepper {
+    display: inline-flex;
+    border: 2rpx solid var(--stepper-border-color, #cccccc);
+    border-radius: 8rpx;
+    height: var(--stepper-height, 52rpx);
+    overflow: hidden;
+
+    &__minus,
+    &__plus {
+        width: var(--stepper-button-width, 60rpx);
+        height: 100%;
+        background: var(--stepper-button-background, #fff);
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            height: 2rpx;
+            width: 18rpx;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+            background-color: var(--stepper-button-color, #4b4b4b);
+        }
+
+        &.hover {
+            background-color: var(--stepper-button-hover-background, #ccc);
+        }
+
+        &.disabled {
+            background-color: var(
+                --stepper-button-disabled-background,
+                #e8e8e8
+            );
+        }
+    }
+
+    &__plus::after {
+        content: '';
+        height: 18rpx;
+        width: 2rpx;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: auto;
+        background-color: var(--stepper-input-color, #4b4b4b);
+    }
+
+    &__input {
+        width: var(--stepper-input-width, 60rpx);
+        height: 100%;
+        border: 0;
+        border-radius: 0;
+        text-align: center;
+        vertical-align: middle;
+        box-sizing: border-box;
+        border-left: 2rpx solid #cccccc;
+        border-right: 2rpx solid #cccccc;
+        background: var(--stepper-input-background, #fff);
+        font-size: var(--stepper-input-font-size, 28rpx);
+    }
+}
